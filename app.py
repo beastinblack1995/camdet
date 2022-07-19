@@ -5,9 +5,11 @@ PATH_TO_TEST_IMAGES_DIR = './images'
 import os
 import glob
 import face_recognition as face_rec
+import cv2
 import shutil
 path = 'employee images'
 employeeImg = []
+
 employeeName = []
 myList = os.listdir(path)
 filename = 'click'
