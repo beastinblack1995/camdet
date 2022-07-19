@@ -69,8 +69,9 @@ def index():
     return render_template('index.html')
 
 # save the image as a picture
-@app.route('/image', methods=['POST','GET'])
+@app.route('/image', methods=['POST'])
 def image():
+    print('clicke')
 
     filist = (os.listdir('images'))
     for fill in filist:
@@ -101,13 +102,14 @@ def image():
         matches = face_rec.compare_faces(EncodeList, encodeFace)
         facedis = face_rec.face_distance(EncodeList, encodeFace)
         print(facedis)
-        if min(facedis) < 0.5:
+        if min(facedis) < 1:
             matchIndex = np.argmin(facedis)
 
             print(matchIndex)
-
+            print(name)
 
             name = employeeName[matchIndex].upper()
+            
 
             #MarkAttendence(name)
             
