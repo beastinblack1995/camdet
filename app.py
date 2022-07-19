@@ -10,7 +10,7 @@ path = 'employee images'
 employeeImg = []
 employeeName = []
 myList = os.listdir(path)
-
+name = 'click_to_attendence'
 
 app = Flask(__name__)
 
