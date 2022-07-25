@@ -102,7 +102,7 @@ def image():
         matches = face_rec.compare_faces(EncodeList, encodeFace)
         facedis = face_rec.face_distance(EncodeList, encodeFace)
         print(facedis)
-        if min(facedis) < 1:
+        if min(facedis) < 100:
             matchIndex = np.argmin(facedis)
 
             print(matchIndex)
